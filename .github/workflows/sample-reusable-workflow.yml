@@ -1,0 +1,18 @@
+on:
+  workflow_call:
+    inputs:
+      your-name:
+        required: true
+        type: string
+    secrets:
+      your-age:
+        required: true
+        
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: greet
+        run: echo "Hello, ${{ inputs.your-name }}! You're ${{ secrets.your-age }} years old?"
+          
