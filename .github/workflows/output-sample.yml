@@ -8,8 +8,8 @@ on:
       secondword:
         description: "The second output string"
         value: ${{ jobs.example_job.outputs.output2 }}
-        
- jobs:
+
+jobs:
   example_job:
     name: Generate output
     runs-on: ubuntu-latest
