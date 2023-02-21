@@ -2,7 +2,7 @@ name: Output sample for reusable workflow
 on:
   workflow_call:
     outputs:
-      fristword:
+      firstword:
         description: "The frist output string"
         value: ${{ jobs.example_job.outputs.output1 }}
       secondword:
